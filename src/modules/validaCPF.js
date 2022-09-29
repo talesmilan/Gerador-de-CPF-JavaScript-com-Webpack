@@ -1,4 +1,4 @@
-class ValidaCPF {
+export default class ValidaCPF {
     // Construtor
     constructor(cpfRecebido) {
         // Transforma o número da string do CPF em uma string de apenas números
@@ -20,7 +20,7 @@ class ValidaCPF {
         return novoCpf === this.cpfLimpo
     }
     // Método que cria o último e penúltimo digito
-    criaDigito(cpfParcial) {
+    static criaDigito(cpfParcial) {
         const cpfArray = Array.from(cpfParcial);
         // Faz o cálculo necessário para criar os digitos
         let contagemRegressiva = cpfArray.length + 1;
